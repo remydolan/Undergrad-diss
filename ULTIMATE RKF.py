@@ -83,7 +83,7 @@ while x<10:
         y4[n]=y4[n-1]+phi4(x,y4[n-1],f1,h)
         y5[n]=y5[n-1]+phi5(x,y5[n-1],f1,h)
         Errest[n]=abs(y4[n]-y5[n])
-        print Errest[n],n,h,x
+        print(Errest[n],n,h,x)
     if Errest[n]<1e-10:
         h=2*h
     if h>=1:
@@ -102,7 +102,7 @@ while x<10:
         break
     n=n+1
     
-#print y5[1],rs[1],Errest[1],1
+#print(y5[1],rs[1],Errest[1],1)
 xmin=0
 xmax=n-1
 plot(xc[xmin:xmax],rs[xmin:xmax],linestyle='solid',label="Analytic Solution")
@@ -121,6 +121,6 @@ show()
 #show()
 
 #plot(Ratio[0:100])
-#print rs,z,y
-print xc,rs,y5,n       
-#print z[n],rs[n],y5[n]
+#print(rs,z,y)
+print(xc,rs,y5,n)       
+#print(z[n],rs[n],y5[n])
