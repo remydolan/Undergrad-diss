@@ -101,8 +101,8 @@ for k in range(1,6):
     delkx[k-1]=-E[k]*(l[k]-l[k-1])/(E[k]-E[k-1])
     l[k+1]=l[k]+delkx[k-1]
    
-    print l[k],E[k]
-print pi*pi*node*node
+    print(l[k],E[k])
+print(pi*pi*node*node)
 
 
 
