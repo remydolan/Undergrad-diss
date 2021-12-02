@@ -17,7 +17,7 @@ h=tmax/float(i-1)
 beta=0
 #gg is guess for gradient
 gg=np.arange(-10,11,1)
-print gg
+print(gg)
 
 #function to be solved
 def f1(t,y):
@@ -54,7 +54,7 @@ for k in range (0,21):
 #creates list with all the different values of y for corresponding gradients
 # from -10 to 10
     yrb[k]=y[100,0]-beta
-print yrb
+print(yrb)
 
 #searches list for sign difference, stops when sign difference detected
 for j in range (0,21):
@@ -68,8 +68,8 @@ for j in range (0,21):
 
         break
         
-print yrb[j],yrb[j+1]
-print gg[j],gg[j+1]
+print(yrb[j],yrb[j+1])
+print(gg[j],gg[j+1])
 #assigns initial guesses for where solution lies
 ydash=zeros([6])
 ydash[1]=gg[j]  
@@ -80,7 +80,7 @@ ydash[0]=gg[j+1]
 E=zeros([6])
 delkx=zeros([6])
 E[0]=yrb[j+1]
-print E[0]
+print(E[0])
 
 
 
@@ -97,9 +97,9 @@ for k in range(1,6):
     delkx[k-1]=-E[k]*(ydash[k]-ydash[k-1])/(E[k]-E[k-1])
     ydash[k+1]=ydash[k]+delkx[k-1]
    
-    print ydash[k],E[k],-cos(1)/sin(1)
-print -cos(1)/sin(1)
-print ydash[k]    
+    print(ydash[k],E[k],-cos(1)/sin(1))
+print(-cos(1)/sin(1))
+print(ydash[k])    
         
 #plot of iterative scheme homing in on solution
 #ki is zero line
@@ -131,4 +131,4 @@ show()
 #title('iterations homing in on solution')
 #plot(ki)
 #show()
-#print E
+#print(E)
