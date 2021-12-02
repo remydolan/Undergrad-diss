@@ -88,7 +88,7 @@ while t<tmax:
         y5[n]=y5[n-1]+phi5(t,y5[n-1],f1,h)
         Errest[n]=abs(y4[n]-y5[n])
 
-        print Errest[n],n,h,t
+        print(Errest[n],n,h,t)
     if max(Errest[n])<1e-17:
         h=2*h
     if h>=1:
@@ -105,9 +105,9 @@ while t<tmax:
         break
     n=n+1
 
-print t,h,Errest[n-1],n-1,y5[n-1]
-#print z[n-2]
-#print t,h,Errest[n],n,y5[n]
+print(t,h,Errest[n-1],n-1,y5[n-1])
+#print(z[n-2])
+#print(t,h,Errest[n],n,y5[n])
 #1.392955961,4.032096673,5.616533094
 fp[0:i]=np.array([y5[n-1,0],y5[n-1,1],y5[n-1,2]]) 
 maxus=n-1
